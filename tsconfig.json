@@ -1,19 +1,19 @@
 {
 	"compilerOptions": {
+		"baseUrl": "./src",
+
+		"allowJs": false,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"lib": ["dom", "dom.iterable", "esnext"],
 		"module": "commonjs",
-		"outDir": "dist",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "es2017",
-		"noEmit": false,
-
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": false,
+		"target": "esnext",
 
 		/* type-checking */
 		"strictNullChecks": true,
@@ -26,9 +26,12 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+
+		// Parcel module loading
+		"paths": { "~*": ["./*"] }
 	},
 	"compileOnSave": true,
 	"exclude": ["node_modules"],
-	"include": ["./src/**/*.ts", "./src/**/*.tsx", "./@types/**/*"]
+	"include": ["./**/*.ts", "./**/*.tsx"]
 }
